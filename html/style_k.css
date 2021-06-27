@@ -1,0 +1,121 @@
+body{
+    background-color: cadetblue !important;
+    display: block;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.image{
+    margin-top: 40px;
+    height: 8%;
+    width: 30%;
+}
+
+.input_box{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.txt_bar{
+    display: inline-flex;
+    justify-content: space-between;
+    border-radius:30px;
+    border:1px solid #dcdcdc;
+    background-color: white;
+    width:575px;
+}
+.txt_bar:hover{
+    box-shadow: 1px 1px 8px 1px grey;
+}
+.txt_bar:focus-within{
+    box-shadow: 1px 1px 8px 1px #dcdcdc;
+    outline:none;
+}
+input{
+    padding: 5px;
+    border-radius: 30px;
+    border: none;
+    width: 500px;
+    outline: none;
+    font-size:20px !important;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.mic{
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    background-color: white;
+    margin-right: 6px !important;
+    
+}
+.mic:hover{
+    text-shadow: 3px 3px 10px gray;
+}
+/* Action */
+.btn {
+    padding: 10px 30px  !important;
+    box-shadow: 0px 1px 0px 1px whitesmoke;
+    border-radius: 30px !important;
+    margin-right: 20px;
+    border: none !important;
+    outline: none !important;
+}
+.run{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    
+}
+.kube_act{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Animation */
+
+.animate{
+    margin-top: 20px;
+    
+}
+
+#bars {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 300px !important;
+}
+
+.bar {
+    background: white;
+    bottom: 1px;
+    height: 3px;
+    width: 10px;
+    margin: 0px 4px;
+    border-radius: 5px;
+    animation: sound 0ms -600ms linear infinite alternate;
+}
+
+@keyframes sound {
+    0% {
+       opacity: .35;
+        height: 3px; 
+    }
+    100% {
+        opacity: 1;       
+        height: 70px;        
+    }
+}
+
+.bar:nth-child(1)  { left: 1px; animation-duration: 474ms; }
+.bar:nth-child(2)  { left: 15px; animation-duration: 433ms; }
+.bar:nth-child(3)  { left: 29px; animation-duration: 407ms; }
+.bar:nth-child(4)  { left: 43px; animation-duration: 458ms; }
+.bar:nth-child(5)  { left: 57px; animation-duration: 400ms; }
+.bar:nth-child(6)  { left: 71px; animation-duration: 427ms; }
+.bar:nth-child(7)  { left: 85px; animation-duration: 441ms; }
+.bar:nth-child(8)  { left: 99px; animation-duration: 419ms; }
+.bar:nth-child(9)  { left: 113px; animation-duration: 487ms; }
+.bar:nth-child(10) { left: 127px; animation-duration: 442ms; }

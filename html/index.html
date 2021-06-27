@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser-Kube</title>
+    <link rel="stylesheet" type="text/css" href="style_k.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+window.onload=function(){
+
+	navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(function(stream) {
+        console.log('You let me use your mic!')
+      })
+      .catch(function(err) {
+        console.log('No mic for you!')
+      });
+	
+}
+
+      
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <Img class="image" src="https://kubernetes.io/images/kubernetes-horizontal-color.png"></Img>
+    </div>
+    <!-- Input -->
+    <div class="input_box">
+        <div class="txt_bar">
+            <input class="searchbar" type="text" title="run" placeholder="Enter Your Command" id="cmd">
+            <button type="button" class="mic" onclick="voiceFun()"><i class="fa fa-microphone" style="font-size:36px;color: teal;"></i></button>
+        </div>
+    </div>
+    <!-- Voice Animation -->
+    <div class="animate">
+        <div id="bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+    </div>
+
+    <!-- Some Actions -->
+    <div class="run">
+        <button id = "sub" class = "btn btn-primary"  onclick = "run_command()">
+            RUN
+        </button>
+    </div>
+ 
+     <div class="kube_act">
+        <button class = "btn btn-success" onclick = "launch_pod()" id = "lp">
+            Launch pod
+           </button>
+       
+           <button class = "btn btn-success" onclick = "launch_deployment()" id = "ld">
+            Launch deployment
+           </button> 
+       
+           <button class = "btn btn-success" onclick = "scale_deployment()" id = "sd">
+            Scale deployment
+           </button>
+        
+           <button class = "btn btn-warning" onclick = "create_service()" id = "cs">
+            Create service
+           </button>
+       
+           <button class = "btn btn-danger" onclick = "del()" id = "del">
+            <i class="far fa-trash-alt"></i>
+            Delete
+           </button>
+     </div>
+ 
+     
+     <div class="modal fade" id="newModal" role="dialog">
+        <div class="modal-dialog  modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">×</button>
+              <h4 class="modal-title">Output Window</h4>
+            </div>
+          <div class="modal-body">
+            <pre id="out"><p>This is demo text.</p></pre>
+          </div>
+        </div>
+     </div>
+  </div>
+
+
+
+
+    <script src="script_k.js"></script>
+</body>
+</html>
